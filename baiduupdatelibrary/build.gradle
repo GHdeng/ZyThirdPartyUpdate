@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 24
+    buildToolsVersion '24.0.3'
 
     defaultConfig {
         minSdkVersion 15
@@ -22,10 +22,12 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/BDAutoUpdateSDK_V1.2.0.2.jar')
+    compile files('libs/galaxy_lite.jar')
+    compile files('libs/patchupdate.jar')
 }
 
 // 项目引用的版本号
-version = "0.0.1"
+version = "0.0.3"
 
 def siteUrl = 'https://github.com/GHdeng/ZyThirdPartyUpdate' // 项目主页。
 def gitUrl = 'git@github.com:GHdeng/ZyThirdPartyUpdate.git' // Git仓库的url。
